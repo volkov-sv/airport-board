@@ -1,0 +1,11 @@
+body {
+    padding-top: 5rem;
+  }
+
+.badge {
+  margin-left: 5px;
+}
+
+.spinner-hide {
+  display: none;
+}

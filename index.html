@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Airport Table</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+    <link href="airport.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <div class="container d-flex flex-column flex-md-row justify-content-between">
+
+            <div class="btn-group btn-group-toggle" data-toggle="buttons" id="typeFlight">
+                <label class="btn btn-secondary active" id="arrival" data-type="arrival">
+                    <input type="radio" name="options" id="option1" autocomplete="off" value="arrival" data-type="arrival"
+                        checked> Arrival
+                </label>
+                <label class="btn btn-secondary" id="departing" data-type="departure">
+                    <input type="radio" name="options" id="option2" value="departure" data-type="departure"
+                        autocomplete="off"> Departure
+                </label>
+            </div>
+            <div class="btn-group-toggle btn-delay" data-toggle="buttons">
+                <label class="btn btn-secondary active">
+                    <input type="checkbox" name="checkbox"> Delayed
+                </label>
+            </div>
+            <div>
+                <select class="custom-select select-date">
+                    <option selected value="0">Today</option>
+                    <option value="-1">Yesterday</option>
+                    <option value="1">Tomorrow</option>
+                    <option value="2">Day after tomorrow</option>
+                </select>
+            </div>
+            <div>
+                <select class="custom-select select-hours" id="select-hours">
+                    <option value="-1" id="anyTime" data-any="true">Any time</option>
+                    <option value="0">00:00 – 02:00</option>
+                    <option value="2">02:00 – 04:00</option>
+                    <option value="4">04:00 – 06:00</option>
+                    <option value="6">06:00 – 08:00</option>
+                    <option value="8">08:00 – 10:00</option>
+                    <option value="10">10:00 – 12:00</option>
+                    <option value="12">12:00 – 14:00</option>
+                    <option value="14">14:00 – 16:00</option>
+                    <option value="16">16:00 – 18:00</option>
+                    <option value="18">18:00 – 20:00</option>
+                    <option value="20">20:00 – 22:00</option>
+                    <option value="22">22:00 – 24:00</option>
+                </select>
+            </div>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search by flight number" id="search">
+            </form>
+
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="text-center">
+            <div class="spinner-border" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+    </div>
+
+    <main class="container d-flex flex-column flex-md-row justify-content-between">
+        <table class="table" id="table"></table>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
